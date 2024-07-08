@@ -1,21 +1,22 @@
 export class StackArray {
   constructor() {
     this._elements = []
-    this._topIndex = 0
+  }
+
+  get size() {
+    return this._elements.length
   }
 
   get isEmpty() {
-    return this._elements.length === 0
+    return this.size === 0
   }
 
   push(element) {
     this._elements.push(element)
-    this._topIndex++
   }
 
   pop() {
     this._elements.pop()
-    this._topIndex = this._elements.length
   }
 
   peek() {
@@ -23,7 +24,7 @@ export class StackArray {
       return null
     }
 
-    return this._elements[this._topIndex]
+    return this._elements[this._elements.length - 1]
   }
 
   print() {
