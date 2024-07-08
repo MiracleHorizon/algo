@@ -1,3 +1,7 @@
+/*
+  Leetcode: https://leetcode.com/problems/remove-outermost-parentheses
+ */
+
 import { StackMap as Stack } from '@structures/stack/StackMap.js'
 
 export function removeOuterParentheses(string) {
