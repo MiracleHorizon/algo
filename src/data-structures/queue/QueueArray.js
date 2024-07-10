@@ -3,8 +3,12 @@ export class QueueArray {
     this._elements = []
   }
 
+  get size() {
+    return this._elements.length
+  }
+
   get isEmpty() {
-    return this._elements.length === 0
+    return this.size === 0
   }
 
   enqueue(element) {

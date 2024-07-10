@@ -5,8 +5,12 @@ export class QueueMap {
     this._backIndex = 0
   }
 
+  get size() {
+    return this._elements.size
+  }
+
   get isEmpty() {
-    return this._elements.size === 0
+    return this.size === 0
   }
 
   enqueue(elements) {
